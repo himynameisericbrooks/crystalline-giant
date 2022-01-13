@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life Counter</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Life Counter</h1>
+    </header>
+    <section id="events">
+      <h2>Your Life</h2>
+      <button v-on:click="add(5)">+5</button>
+      <button v-on:click="add(1)">+1</button>
+      <button v-on:click="reduce(1)">-1</button>
+      <button v-on:click="reduce(5)">-5</button>
+      <p>Total: {{ counter }}</p>
+      <input type="text" v-on:input="setName">
+      <p>Name: {{ name }}</p>
+    </section>
+  </body>
+</html>
